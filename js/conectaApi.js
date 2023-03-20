@@ -4,7 +4,38 @@ async function receberFormulario() {
   return conexaoConvertida;
 }
 
-async function criaFormulario(nome, sobrenome, email, idade) {
+// Cep
+
+async function buscarEndereco(cep) {
+  var consultaCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+  var consultaCepConvertida = await consultaCep.json();
+
+  var cidade = document.getElementById("cidade");
+  var logradouro = document.getElementById("endereco");
+  var estado = document.getElementById("estado");
+  var bairro = document.getElementById("bairro");
+  var cep = document.getElementById("cep");
+
+  cidade.value = consultaCepConvertida.localidade;
+  logradouro.value = consultaCepConvertida.logradouro;
+  estado.value = consultaCepConvertida.uf;
+  bairro.value = consultaCepConvertida.bairro;
+  cep.value = consultaCepConvertida.cep;
+}
+
+// cep.addEventListener("focusout", () => buscarEndereco(cep.value));
+
+async function criaFormulario(
+  nome,
+  sobrenome,
+  email,
+  idade,
+  cidade,
+  logradouro,
+  estado,
+  bairro,
+  cep
+) {
   const conexao = await fetch("http://localhost:4000/formulario", {
     method: "POST",
     headers: {
@@ -15,6 +46,11 @@ async function criaFormulario(nome, sobrenome, email, idade) {
       sobrenome: sobrenome,
       email: email,
       idade: idade,
+      cidade: cidade,
+      logradouro: logradouro,
+      estado: estado,
+      bairro: bairro,
+      cep: cep,
     }),
   });
   const conexaoConvertida = await conexao.json();
@@ -32,4 +68,5 @@ export const conectaApia = {
   receberFormulario,
   criaFormulario,
   buscaFormulario,
+  buscarEndereco,
 };

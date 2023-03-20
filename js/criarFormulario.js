@@ -8,7 +8,22 @@ async function criarFormulario(evento) {
   const sobrenome = document.querySelector("[data-sobrenome]").value;
   const email = document.querySelector("[data-email]").value;
   const idade = document.querySelector("[data-idade]").value;
-  await conectaApia.criaFormulario(nome, sobrenome, email, idade);
+  const cidade = document.querySelector("[data-cidade]").value;
+  const logradouro = document.querySelector("[data-rua]").value;
+  const estado = document.querySelector("[data-estado]").value;
+  const bairro = document.querySelector("[data-bairro]").value;
+  const cep = document.querySelector("[data-cep]").value;
+  await conectaApia.criaFormulario(
+    nome,
+    sobrenome,
+    email,
+    idade,
+    cidade,
+    logradouro,
+    estado,
+    bairro,
+    cep
+  );
   window.location.href = "../pages/envio-concluido.html";
 }
 formulario.addEventListener("submit", (evento) => criarFormulario(evento));
