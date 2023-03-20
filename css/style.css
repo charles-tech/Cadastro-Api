@@ -1,0 +1,61 @@
+* {
+  list-style: none;
+}
+body {
+  box-sizing: border-box;
+}
+.principal__container {
+  /* border: solid 2px red; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.conteudo {
+  padding: 50px;
+  border: solid 2px red;
+  margin-top: 30px;
+  background: rgb(184, 184, 233);
+  border-radius: 50px;
+}
+.cabecalho__pesquisar {
+  /* border: solid 2px green; */
+  justify-content: center;
+  display: flex;
+  margin-bottom: 10px;
+}
+.cadastrar {
+  /* border: solid 2px rgb(60, 0, 128); */
+  justify-content: center;
+  display: flex;
+}
+.menu {
+  padding: 10px;
+}
+.pesquisar__input {
+  margin-right: 10px;
+}
+.cabecalho__pesquisar {
+  margin-right: 5px;
+}
+.pesquisar__input {
+  border-radius: 5px;
+  padding: 10px;
+}
+.formulario__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+p {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.pesquisar__botao {
+  padding: 10px;
+}
+.cadastrar {
+  font-size: 1.5rem;
+}

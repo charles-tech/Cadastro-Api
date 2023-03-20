@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <a class="logo" href="../index.html">Voltar</a>
+
+
+        <form class="container__formulario" data-formulario>
+            <h2 class="formulario__titulo">Enviar Formulario!</h3>
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="url">Nome</label>
+                    <input name="name" class="campo__escrita" required
+                        placeholder="Por exemplo: Charles" id='nome' data-nome />
+                </div>
+
+
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="titulo">Sobrenome</label>
+                    <input name="sobrenome" class="campo__escrita" required placeholder="Por exemplo: Miranda"
+                        id='sobrenome' data-sobrenome />
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="email">Email</label>
+                    <input name="email" class="campo__escrita" required placeholder="Por Exemplo: charles@gmail.com"
+                        id='email' data-email/>
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="campo__etiqueta" for="idade">Idade</label>
+                    <input name="idade" class="campo__escrita" required placeholder="Por Exemplo: 37"
+                        id='idade' data-idade/>
+                </div>
+
+                <input class="formulario__botao" type="submit" />
+        </form>
+
+    </main>
+    <script src="../js/criarFormulario.js" type="module"></script>
+</body>
+</html>

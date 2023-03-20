@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+</head>
+<!-- npx json-server --watch db.json --port 4000 -->
+<body>
+    <nav class="menu">
+        <div class="cabecalho__pesquisar">
+            <input  type="search" placeholder="Pesquisar" id="pesquisar" class="pesquisar__input" data-pesquisa>
+            <button class="pesquisar__botao"data-botao-pesquisa>Pesquisar </button>
+            
+            
+        </div>
+
+        <div class="cadastrar">
+            <a class="cadastrar" href="/pages/enviar-formulario.html">Cadastrar</a>
+        </div>
+    </nav>
+
+    <main class="principal__container">
+
+       
+
+      
+        <ul class="formulario__container" alt="formulario"data-lista>
+        
+    </ul>
+</main>
+    <script src="js/mostrarFormulario.js" type="module"></script>
+    <script src="js/buscarFormulario.js" type="module"></script>
+</body>
+</html>
