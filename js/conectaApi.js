@@ -1,3 +1,5 @@
+var cep = document.getElementById("cep");
+
 async function receberFormulario() {
   const conexao = await fetch("http://localhost:4000/formulario");
   const conexaoConvertida = await conexao.json();
@@ -14,7 +16,6 @@ async function buscarEndereco(cep) {
   var logradouro = document.getElementById("endereco");
   var estado = document.getElementById("estado");
   var bairro = document.getElementById("bairro");
-  var cep = document.getElementById("cep");
 
   cidade.value = consultaCepConvertida.localidade;
   logradouro.value = consultaCepConvertida.logradouro;
@@ -23,7 +24,9 @@ async function buscarEndereco(cep) {
   cep.value = consultaCepConvertida.cep;
 }
 
-// cep.addEventListener("focusout", () => buscarEndereco(cep.value));
+if (cep) {
+  cep.addEventListener("focusout", () => buscarEndereco(cep.value));
+}
 
 async function criaFormulario(
   nome,
